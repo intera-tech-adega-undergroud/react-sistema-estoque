@@ -19,7 +19,7 @@
   justify-content: center;
   padding: 24px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   background:
     radial-gradient(circle at 10% 20%, rgba(21, 21, 23, 0.4), transparent 42%),
     radial-gradient(circle at 90% 80%, rgba(21, 21, 23, 0.52), transparent 36%),
@@ -46,7 +46,7 @@
   background: var(--login-card);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .branding-section {
@@ -54,16 +54,32 @@
   padding: 44px 34px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 14px;
   color: var(--text-primary);
   background:
     linear-gradient(165deg, rgba(60, 60, 66, 0.42), rgba(0, 0, 0, 0.4)),
     rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  border-radius: 22px 0 0 22px;
 }
 
 .logo-glow {
   display: none;
+}
+
+.card-logo {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  object-fit: contain;
+  z-index: 0;
+  filter: brightness(0.62) saturate(0.9) contrast(1.05);
+  pointer-events: none;
+  animation: logoRevealLeft 0.8s ease-out both;
 }
 
 .branding-section h1 {
@@ -71,6 +87,8 @@
   font-size: clamp(1.8rem, 2.3vw, 2.2rem);
   line-height: 1.1;
   letter-spacing: 0.02em;
+  opacity: 0;
+  animation: brandingTextFade 0.65s ease-out 0.35s forwards;
 }
 
 .branding-section h1 span {
@@ -81,12 +99,16 @@
   margin: 0;
   color: var(--text-secondary);
   max-width: 28ch;
+  opacity: 0;
+  animation: brandingTextFade 0.65s ease-out 0.5s forwards;
 }
 
 .form-section {
   position: relative;
   padding: 42px 34px;
   color: var(--text-primary);
+  background: rgba(7, 7, 7, 0.98);
+  border-radius: 0 22px 22px 0;
 }
 
 .top-line-glow {
@@ -224,6 +246,53 @@
 
 .btn-submit:active {
   transform: translateY(0);
+}
+
+@keyframes brandingRevealLeft {
+  from {
+    opacity: 0;
+    transform: translateX(42px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes brandingTextFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logoRevealLeft {
+  from {
+    opacity: 0;
+    transform: translate(calc(-50% + 42px), -50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .branding-section,
+  .card-logo,
+  .branding-section h1,
+  .branding-section p {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (max-width: 820px) {

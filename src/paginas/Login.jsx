@@ -19,14 +19,13 @@ function LoginPage({ onLogin }) {
       <div className="bg-glow"></div>
       
       <div className="login-card">
+        <img
+          src={logo}
+          alt="Adega Underground"
+          className="card-logo"
+        />
         {/* Lado Esquerdo - Branding */}
         <div className="branding-section">
-          <div className="logo-glow"></div>
-          <img
-            src={logo}
-            alt="Adega Underground"
-            style={{ width: '200px', height: '200px', objectFit: 'contain', position: 'relative', zIndex: 1, marginBottom: '-8px', alignSelf: 'center' }}
-          />
           <h1>Adega <span>Underground</span></h1>
           <p>Controle total da sua adega, simples e eficiente.</p>
         </div>
