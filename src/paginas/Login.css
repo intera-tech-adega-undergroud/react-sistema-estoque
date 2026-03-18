@@ -21,8 +21,8 @@
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 10% 20%, rgba(38, 38, 42, 0.34), transparent 42%),
-    radial-gradient(circle at 90% 80%, rgba(21, 21, 23, 0.46), transparent 36%),
+    radial-gradient(circle at 10% 20%, rgba(21, 21, 23, 0.4), transparent 42%),
+    radial-gradient(circle at 90% 80%, rgba(21, 21, 23, 0.52), transparent 36%),
     linear-gradient(130deg, var(--login-bg-start), var(--login-bg-end));
 }
 
@@ -30,8 +30,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 15%, rgba(30, 30, 34, 0.3), transparent 42%),
-    radial-gradient(circle at 80% 85%, rgba(21, 21, 23, 0.38), transparent 46%);
+    radial-gradient(circle at 20% 15%, rgba(21, 21, 23, 0.4), transparent 42%),
+    radial-gradient(circle at 80% 85%, rgba(21, 21, 23, 0.48), transparent 46%);
   pointer-events: none;
 }
 
@@ -58,19 +58,12 @@
   gap: 14px;
   color: var(--text-primary);
   background:
-    linear-gradient(165deg, rgba(38, 38, 42, 0.36), rgba(0, 0, 0, 0.4)),
+    linear-gradient(165deg, rgba(60, 60, 66, 0.42), rgba(0, 0, 0, 0.4)),
     rgba(0, 0, 0, 0.45);
 }
 
 .logo-glow {
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(21, 21, 23, 0.65), transparent 70%);
-  top: 20px;
-  left: 20px;
-  filter: blur(4px);
+  display: none;
 }
 
 .branding-section h1 {
