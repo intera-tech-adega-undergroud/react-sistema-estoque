@@ -77,7 +77,7 @@
   height: 600px;
   object-fit: contain;
   z-index: 0;
-  filter: brightness(1.02) saturate(1) contrast(1.15);
+  filter: brightness(1.18) saturate(1.02) contrast(1.2);
   pointer-events: none;
   animation: logoRevealLeft 0.8s ease-out both;
 }
