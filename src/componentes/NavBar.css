@@ -1,0 +1,92 @@
+.app-layout{
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    font-family: 'Inter', sans-serif;
+    background: rgb(238, 238, 238)  ;
+    transition: 0.2s ease;
+
+}
+
+.sidebar{
+    background: var(--nav);
+    color: var(--text);
+    transition: 0.2s ease;
+    padding: 0;
+    width: 230px;
+    margin: 0;
+
+}
+
+.logo{
+    width: 50px;
+}
+
+.tituloNav{
+    width: 80%;
+    font-size: 13px;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+/* Estilo padrão do link */
+.link {
+    text-decoration: none;
+    color: var(--text); 
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    padding-left: 21px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-weight:400;
+    border-radius: 4px;
+    gap: 8px;
+    width: 90%;
+}
+
+/* Estilo quando o link está ativo (página atual) */
+.link.active {
+  background: linear-gradient(90deg, #52ff836e 0%,#3076433c 100%); 
+  color: var(--text);  
+  font-weight: 500;
+  border-left: 4px solid #52ff83; 
+  width: 100%;
+}
+img{
+    width: 22px;
+}
+.botoes{
+padding-left: 20px;
+}
+
+button{
+    width: 30%;
+    background-color: #cc0c0c;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    height: 25px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+hr{
+    width: 85%;
+      border: none;
+  height: 2px;
+  background-color: #a7a7a724;
+}
+
+
+:root {
+    --verde-escuro: #3076433c;
+    --verde-claro:#52ff836e;
+  --nav: linear-gradient(90deg, #000000 0%, #111111 40%, #2b2b2d 100%);
+    --bg: #000000;
+  --text: #ffffff;
+}
+
