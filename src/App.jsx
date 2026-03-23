@@ -1,23 +1,29 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import LoginPage from './paginas/Login'
 import EmployeesPage from './paginas/Colaboradores'
 import ProductsPage from './paginas/Produtos'
+import CreditRecordPage from './paginas/RegistroFiado'
 import SystemLayout from './componentes/NavBar'
 import ProtectedRoute from './routes/ProtectedRoute'
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const handleLogin = () => {
-    setIsAuthenticated(true)
+  setIsAuthenticated(true)
   }
 
   const handleLogout = () => {
     setIsAuthenticated(false)
   }
 
+
+
   return (
+    <>
+
+    
     <Routes>
       <Route
         path="/"
@@ -29,16 +35,23 @@ function App() {
           )
         }
       />
+      
 
       <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
-        <Route element={<SystemLayout onLogout={handleLogout} />}>
+        <Route element={
+          <SystemLayout 
+            onLogout={handleLogout}  
+          />
+        }>
           <Route path="/produtos" element={<ProductsPage />} />
           <Route path="/colaboradores" element={<EmployeesPage />} />
+          <Route path="/registrofiado" element={<CreditRecordPage />} />
         </Route>
       </Route>
 
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
+    </>
   )
 }
 
