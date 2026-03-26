@@ -6,6 +6,7 @@ import ProductsPage from './paginas/Produtos'
 import CreditRecordPage from './paginas/RegistroFiado'
 import SystemLayout from './componentes/NavBar'
 import ProtectedRoute from './routes/ProtectedRoute'
+import TopBar from './componentes/TopBar'
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -22,8 +23,6 @@ function App() {
 
   return (
     <>
-
-    
     <Routes>
       <Route
         path="/"
@@ -51,6 +50,8 @@ function App() {
 
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
+
+    <TopBar/>
     </>
   )
 }

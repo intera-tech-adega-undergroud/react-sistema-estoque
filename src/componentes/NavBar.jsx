@@ -26,7 +26,6 @@ function SystemLayout({ onLogout}) {
           </NavLink>
           
           <hr />
-          <br />
           
           <NavLink 
             className={({ isActive }) => isActive ? 'link active' : 'link'} 
