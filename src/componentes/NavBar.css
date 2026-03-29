@@ -5,6 +5,8 @@
     font-family: 'Inter', sans-serif;
     background: rgb(238, 238, 238)  ;
     transition: 0.2s ease;
+    min-height: 100vh;
+    display: flex;
 
 }
 
@@ -15,6 +17,7 @@
     padding: 0;
     width: 230px;
     margin: 0;
+    min-height: 100vh;
 
 }
 
@@ -54,14 +57,25 @@
   border-left: 4px solid #52ff83; 
   width: 100%;
 }
-img{
+.nav-icon {
     width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.nav-icon img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
 }
 .botoes{
 padding-left: 20px;
 }
 
-button{
+.sidebar .botoes button{
     width: 30%;
     background-color: #cc0c0c;
     border: none;
@@ -70,7 +84,7 @@ button{
     height: 25px;
 }
 
-button:hover{
+.sidebar .botoes button:hover{
     cursor: pointer;
 }
 
@@ -79,6 +93,17 @@ hr{
       border: none;
   height: 2px;
   background-color: #a7a7a724;
+}
+
+.page-content {
+        flex: 1;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+}
+
+.page-body {
+        flex: 1;
 }
 
 
