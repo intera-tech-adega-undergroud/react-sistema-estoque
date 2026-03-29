@@ -1,0 +1,62 @@
+.app-header {
+  width: 100%;
+  height: 62px;
+  background: #0f1115;
+  border-bottom: 1px solid #2a2d33;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.app-header__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-header__bell {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.app-header__bell svg {
+  width: 22px;
+  height: 22px;
+}
+
+.app-header__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.app-header__user {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.app-header__name {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.app-header__role {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  font-weight: 400;
+}
