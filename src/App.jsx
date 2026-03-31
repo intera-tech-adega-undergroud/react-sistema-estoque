@@ -4,9 +4,11 @@ import LoginPage from './paginas/Login'
 import EmployeesPage from './paginas/Colaboradores'
 import ProductsPage from './paginas/Produtos'
 import CreditRecordPage from './paginas/RegistroFiado'
+import DashboardPage from './paginas/Dashboard'
 import SystemLayout from './componentes/NavBar'
 import ProtectedRoute from './routes/ProtectedRoute'
-import TopBar from './componentes/TopBar'
+import avatarPadrao from './assets/avatarPadrao.svg'
+
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -28,7 +30,7 @@ function App() {
         path="/"
         element={
           isAuthenticated ? (
-            <Navigate to="/produtos" replace />
+            <Navigate to="/dashboard" replace />
           ) : (
             <LoginPage onLogin={handleLogin} />
           )
@@ -39,9 +41,13 @@ function App() {
       <Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
         <Route element={
           <SystemLayout 
-            onLogout={handleLogout}  
+            onLogout={handleLogout}
+            nomeUsuario="Junior"
+            cargoUsuario="Gerente"
+            avatarUsuario={avatarPadrao}
           />
         }>
+          <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/produtos" element={<ProductsPage />} />
           <Route path="/colaboradores" element={<EmployeesPage />} />
           <Route path="/registrofiado" element={<CreditRecordPage />} />
@@ -51,7 +57,6 @@ function App() {
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
 
-    <TopBar/>
     </>
   )
 }
