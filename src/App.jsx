@@ -8,6 +8,7 @@ import DashboardPage from './paginas/Dashboard'
 import SystemLayout from './componentes/NavBar'
 import ProtectedRoute from './routes/ProtectedRoute'
 import avatarPadrao from './assets/avatarPadrao.svg'
+import Header from './componentes/Header'
 
 
 function App() {
