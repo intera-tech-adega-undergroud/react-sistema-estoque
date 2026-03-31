@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import Buscar from "../componentes/Buscar";
 import "../paginas/Produtos.css";
