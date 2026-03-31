@@ -1,5 +1,3 @@
-
-import TopBar from "../componentes/TopBar"
 import { useEffect, useState } from "react";
 import Buscar from "../componentes/Buscar";
 import "../paginas/Produtos.css";
@@ -174,7 +172,6 @@ function ProductsPage() {
 
   return (
     <>
-    <TopBar/>
   
     <div className="produtos-container">
       <h1>Produtos</h1>

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import TopBar from "../componentes/TopBar";
 import "./RegistroFiado.css";
 
 function CreditRecordPage() {
@@ -8,14 +7,13 @@ function CreditRecordPage() {
 
   return (
     <>
-      <TopBar />
 
       <main className="conteudo">
         <h1 className="titulo">Registro Fiado</h1>
 
         <div className="filtros">
 
-          {/* Status */}
+          
           <div className="statusFiado">
             {["Em Aberto", "Pagos", "Todos"].map((item) => (
               <button
@@ -30,12 +28,19 @@ function CreditRecordPage() {
 
           {/* Data */}
           <div className="filtroData">
-            <span>Período</span>
-            <input
-              type="date"
-              value={data}
-              onChange={(e) => setData(e.target.value)}
-            />
+            <span>Período :</span>
+            <p>01/04/2026</p>
+            <span>-</span>
+            <p>20/04/2027 </p>
+            
+          </div>
+
+          <div className="valorAberto">
+            <p className="totalAberto">Total em Aberto</p>
+            <div className="valor">
+              <span>R$</span>
+              <p>00,00</p>
+            </div>
           </div>
 
         </div>

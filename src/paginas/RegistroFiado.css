@@ -1,5 +1,9 @@
 .conteudo{
+    background-color: #0f1115;
     padding: 25px;
+    min-height: 100%;
+    box-sizing: border-box;
+    color: #ffffff;
 }
 
 .titulo{
@@ -18,7 +22,7 @@
 /* Status */
 .statusFiado {
     display: flex;
-    background: #0f1115;
+    background: #2a2a2b;
     border-radius: 10px;
     padding: 5px;
 }
@@ -33,18 +37,22 @@
 }
 
 .statusFiado button.active {
-    background: #1a1d24;
+    background: linear-gradient(180deg, #5fff8aaa 0%, #24b94b 100%);
     color: #fff;
 }
 
 /* Data */
 .filtroData {
+    font-size: small;
     display: flex;
     align-items: center;
     gap: 10px;
-    background: #0f1115;
-    padding: 10px;
+    background:  #2a2a2b61;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
     border-radius: 10px;
+    border: solid 1px #2a2a2b;
     color: #ccc;
 }
 
@@ -53,4 +61,32 @@
     border: none;
     color: #fff;
     outline: none;
+}
+
+.valorAberto{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #5fff8a25 0%, #24b94c50 100%);
+    border-radius: 5px;
+    padding-left: 80px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-bottom: solid 3px #02f347ea;
+}
+
+.totalAberto{
+    font-size: small;
+    color: #9dad9d8c;
+}
+
+.valor{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+}
+
+p{
+    margin: 2px;
 }
