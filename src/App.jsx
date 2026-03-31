@@ -9,6 +9,7 @@ import SystemLayout from './componentes/NavBar'
 import ProtectedRoute from './routes/ProtectedRoute'
 import avatarPadrao from './assets/avatarPadrao.svg'
 
+
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -24,8 +25,6 @@ function App() {
 
   return (
     <>
-
-    
     <Routes>
       <Route
         path="/"
@@ -57,6 +56,7 @@ function App() {
 
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
+
     </>
   )
 }

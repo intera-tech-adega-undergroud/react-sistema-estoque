@@ -1,0 +1,71 @@
+.topBar {
+    background-color: rgba(197, 196, 196, 0.17);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topBar input {
+    padding: 8px;
+    width: 24rem;
+    border-radius: 6px;
+    border: none;
+    margin-left: 20px;
+    outline: none;
+}
+
+.infoUser {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+.perfil h4 {
+    margin: 0;
+}
+
+.perfil p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.topBar input::placeholder {
+    color: #aaa;
+}
+
+.topBar input:focus {
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+.topBar {
+    backdrop-filter: blur(8px);
+}
+
+.searchBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchBox img {
+    position: absolute;
+    left: 30px;
+    width: 16px;
+    opacity: 0.6;
+}
+
+.searchBox input {
+    padding: 8px 8px 8px 40px; /* espaço pra lupa */
+    width: 24rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}

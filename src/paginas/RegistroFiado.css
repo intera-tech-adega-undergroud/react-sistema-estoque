@@ -1,0 +1,56 @@
+.conteudo{
+    padding: 25px;
+}
+
+.titulo{
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.filtros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Status */
+.statusFiado {
+    display: flex;
+    background: #0f1115;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.statusFiado button {
+    background: transparent;
+    border: none;
+    color: #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.statusFiado button.active {
+    background: #1a1d24;
+    color: #fff;
+}
+
+/* Data */
+.filtroData {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #0f1115;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ccc;
+}
+
+.filtroData input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+}
