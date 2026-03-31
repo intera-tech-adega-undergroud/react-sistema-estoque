@@ -1,5 +1,4 @@
 import { useState } from "react";
-import TopBar from "../componentes/TopBar";
 import "./RegistroFiado.css";
 
 function CreditRecordPage() {
@@ -8,7 +7,6 @@ function CreditRecordPage() {
 
   return (
     <>
-      <TopBar />
 
       <main className="conteudo">
         <h1 className="titulo">Registro Fiado</h1>
