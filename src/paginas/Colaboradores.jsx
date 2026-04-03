@@ -17,6 +17,9 @@ function EmployeesPage() {
   const [email, setEmail] = useState("");
   const [erroEmail, setErroEmail] = useState("");
 
+  const [turno, setTurno] = useState("");
+  const [perfil, setPerfil] = useState("");
+
   const todasPermissoes = [
     "usuarios_ver", "usuarios_criar", "usuarios_editar", "usuarios_desativar", "usuarios_reset",
     "produtos_ver", "produtos_criar", "produtos_excluir",
@@ -45,9 +48,10 @@ function EmployeesPage() {
   };
 
   const handlePerfil = (e) => {
-    const perfil = e.target.value;
-    if (!perfil) return setPermissoes([]);
-    if (perfis[perfil]) setPermissoes(perfis[perfil]);
+    const valor = e.target.value;
+    setPerfil(valor); // novo
+    if (!valor) return setPermissoes([]);
+    if (perfis[valor]) setPermissoes(perfis[valor]);
   };
 
   const handleCpf = (e) => {
@@ -101,6 +105,7 @@ function EmployeesPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
 
     setErroForm("");
 
@@ -117,6 +122,16 @@ function EmployeesPage() {
 
     if (erroEmail) {
       mostrarErro("Corrija o e-mail antes de continuar");
+      return;
+    }
+
+    if (!turno) {
+      mostrarErro("Selecione um turno");
+      return;
+    }
+
+    if (!perfil) {
+      mostrarErro("Selecione um perfil rápido");
       return;
     }
 
@@ -242,11 +257,11 @@ function EmployeesPage() {
             <div className="row one">
               <div>
                 <label>Turno</label>
-                <select>
-                  <option>Selecione</option>
-                  <option>Manhã</option>
-                  <option>Tarde</option>
-                  <option>Noite</option>
+                <select value={turno} onChange={(e) => setTurno(e.target.value)}>
+                  <option value="">Selecione</option>
+                  <option value="Manhã">Manhã</option>
+                  <option value="Tarde">Tarde</option>
+                  <option value="Noite">Noite</option>
                 </select>
               </div>
             </div>
