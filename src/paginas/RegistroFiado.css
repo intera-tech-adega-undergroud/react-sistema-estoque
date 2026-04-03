@@ -22,7 +22,7 @@
 /* Status */
 .statusFiado {
     display: flex;
-    background: #2a2a2b;
+    background: #2a2a2b7a;
     border-radius: 10px;
     padding: 5px;
 }
@@ -89,4 +89,84 @@
 
 p{
     margin: 2px;
+}
+
+body {
+  background: #0f1115;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.tabela-container {
+  background: #161a2086;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 12px;
+  color: #aaa;
+}
+
+td {
+  padding: 15px 12px;
+  border-top: 1px solid #2a2f36;
+}
+
+
+/* STATUS */
+.status {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.status.aberto {
+  background: #3a2f0b;
+  color: #f5a623;
+}
+
+.status.pago {
+  background: #0d3b1f;
+  color: #2ecc71;
+}
+
+/* BOTÃO */
+.btn-cobrar {
+  background: #1f7a3f;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-cobrar:hover {
+  background: #28a745;
+}
+
+/* PAGINAÇÃO */
+.paginacao {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.paginacao span {
+  margin: 0 5px;
+  padding: 10px 15px;
+  background: #2a2f36;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+.paginacao .ativo {
+  background: #1f7a3f;
+  border: solid 1px #28a745;
 }

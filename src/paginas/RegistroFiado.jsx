@@ -1,9 +1,38 @@
 import { useState } from "react";
 import "./RegistroFiado.css";
+import LinhaFiado from "../componentes/LinhaFiado";
+
 
 function CreditRecordPage() {
   const [status, setStatus] = useState("Em Aberto");
   const [data, setData] = useState("");
+
+  const dados = [
+    {
+      cliente: "Vinicius Oliveira",
+      valor: 130,
+      data: "01/03/2026",
+      status: "Em Aberto",
+    },
+    {
+      cliente: "Juliana Ribeiro",
+      valor: 115,
+      data: "02/03/2026",
+      status: "Em Aberto",
+    },
+    {
+      cliente: "Alan Souza",
+      valor: 61,
+      data: "03/03/2026",
+      status: "Pago",
+    },
+    {
+      cliente: "Raquel Lima",
+      valor: 350,
+      data: "20/02/2026",
+      status: "Em Aberto",
+    },
+  ];
 
   return (
     <>
@@ -15,7 +44,7 @@ function CreditRecordPage() {
 
           
           <div className="statusFiado">
-            {["Em Aberto", "Pagos", "Todos"].map((item) => (
+            {[ "Todos", "Em Aberto", "Pagos"].map((item) => (
               <button
                 key={item}
                 className={status === item ? "active" : ""}
@@ -43,6 +72,36 @@ function CreditRecordPage() {
             </div>
           </div>
 
+        </div>
+
+        <div className="tabela-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Valor Total</th>
+                <th>Data Venda</th>
+                <th>Status</th>
+                <th>Cobrar</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {dados.map((item, index) => (
+                <LinhaFiado key={index} {...item} />
+              ))}
+            </tbody>
+          </table>
+
+          <div className="paginacao">
+            <button>{"<"} Anterior</button>
+            <div>
+              <span className="ativo">1</span>
+              <span>2</span>
+              <span>3</span>
+            </div>
+            <button>Próxima {">"}</button>
+          </div>
         </div>
       </main>
     </>
