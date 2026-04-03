@@ -198,24 +198,24 @@ function EmployeesPage() {
 
             <div className="row">
               <div>
-                <label>Nome</label>
+                <label>*Nome</label>
                 <input placeholder="Ex: João" />
               </div>
               <div>
-                <label>Sobrenome</label>
+                <label>*Sobrenome</label>
                 <input placeholder="Ex: Souza" />
               </div>
             </div>
 
             <div className="row">
               <div>
-                <label>CPF</label>
+                <label>*CPF</label>
                 <input placeholder="000.000.000-00" onChange={handleCpf} />
                 <div className="hint">Somente Números</div>
               </div>
 
               <div>
-                <label>E-mail</label>
+                <label>*E-mail</label>
                 <input value={email} onChange={handleEmail} />
                 {erroEmail && <div className="hint erro-email">{erroEmail}</div>}
               </div>
@@ -223,13 +223,13 @@ function EmployeesPage() {
 
             <div className="row">
               <div>
-                <label>Telefone</label>
+                <label>*Telefone</label>
                 <input onChange={handleTel} />
                 <div className="hint">Somente Números</div>
               </div>
 
               <div className="pwd">
-                <label>Senha</label>
+                <label>*Senha</label>
 
                 <div className="input-wrapper">
                   <input type={mostrarSenha ? "text" : "password"} value={senha} onChange={handleSenha} />
@@ -265,6 +265,7 @@ function EmployeesPage() {
                 </select>
               </div>
             </div>
+            <p className="p2">Campos marcados com * são obrigatórios</p>
           </div>
 
           {/* COLUNA 2 */}

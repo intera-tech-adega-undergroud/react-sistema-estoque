@@ -386,6 +386,12 @@
      animation: fadeOut 1s ease forwards;
  }
 
+ .p2 {
+    color: #a6adb7;
+    margin-top: 180px;
+    font-size: 12px;
+ }
+
  @keyframes fadeOut {
      from {
          opacity: 1;
