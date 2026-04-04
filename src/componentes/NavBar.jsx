@@ -43,6 +43,16 @@ function SystemLayout({ onLogout, nomeUsuario, cargoUsuario, avatarUsuario }) {
             </span>
             Registro Fiado
           </NavLink>
+
+          <NavLink 
+            className={({ isActive }) => isActive ? 'link active' : 'link'} 
+            to="/perdas"
+          >
+            <span className="nav-icon">
+            📉
+            </span>
+              Perdas
+          </NavLink>
           
           <hr />
           
